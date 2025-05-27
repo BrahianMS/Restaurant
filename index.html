@@ -14,14 +14,47 @@
     </header>
     <nav class="navbar">
         <ul class="navbar__ul">
-            <li class="navbar__list"><a class="list__a" href="#">Nosotros</a></li>
-            <li class="navbar__list"><a class="list__a" href="#">Menú</a></li>
-            <li class="navbar__list"><a class="list__a" href="#">Sedes</a></li>
+            <li class="navbar__list"><a class="list__link" href="#">Nosotros</a></li>
+            <li class="navbar__list:active"><a class="list__link" href="#">Menú</a></li>
+            <li class="navbar__list"><a class="list__link" href="#">Sedes</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="container">
         <section class="category">
-            <h2>Entradas</h2>
+            <h2 class="category__title">Entradas</h2>
+            <article class="category__plate">
+                <figure class="plate_cont">
+                    <img src="img/carpaccio.jpg" alt="Carpaccio" class="plate__img">
+                </figure>
+                <p class="plate__name">Carpaccio</p>
+                <p class="plate__price">Precio: </p>
+            </article>
+            <article class="category__plate">
+                <figure class="plate_cont">
+                    <img src="img/caprese.jpg" alt="Ensalada Caprese" class="plate__img">
+                    <figcaption class="plate__name">Ensalada Caprese</figcaption>
+                </figure>
+                <p class="plate__price">Precio: </p>
+            </article>
+            <article class="category__plate">
+                <figure class="plate_cont">
+                    <img src="img/fruttidimare.jpg" alt="Frutti di mare" class="plate__img">
+                    <figcaption class="plate__name">Frutti di mare</figcaption>
+                </figure>
+                <p class="plate__price">Precio: </p>
+            </article>
+            <article class="category__plate">
+                <figure class="plate_cont">
+                    <img src="img/vitellotonnato.jpg" alt="Vitello tonnato" class="plate__img">
+                    <figcaption class="plate__name">Vitello tonnato</figcaption>
+                </figure>
+                <p class="plate__price">Precio: </p>
+            </article>
+                </figure>
+            </article>
+        </section>
+        <section class="category">
+            <h2 class="category__title">Platos</h2>
             <article class="category__plate">
                 <figure class="plate_cont">
                     <img src="" alt="" class="plate__img">
@@ -54,40 +87,7 @@
             </article>
         </section>
         <section class="category">
-            <h2>Platos</h2>
-            <article class="category__plate">
-                <figure class="plate_cont">
-                    <img src="" alt="" class="plate__img">
-                    <figcaption class="plate__name">Plato</figcaption>
-                </figure>
-                <p class="plate__price">Precio: </p>
-            </article>
-            <article class="category__plate">
-                <figure class="plate_cont">
-                    <img src="" alt="" class="plate__img">
-                    <figcaption class="plate__name">Plato</figcaption>
-                </figure>
-                <p class="plate__price">Precio: </p>
-            </article>
-            <article class="category__plate">
-                <figure class="plate_cont">
-                    <img src="" alt="" class="plate__img">
-                    <figcaption class="plate__name">Plato</figcaption>
-                </figure>
-                <p class="plate__price">Precio: </p>
-            </article>
-            <article class="category__plate">
-                <figure class="plate_cont">
-                    <img src="" alt="" class="plate__img">
-                    <figcaption class="plate__name">Plato</figcaption>
-                </figure>
-                <p class="plate__price">Precio: </p>
-            </article>
-                </figure>
-            </article>
-        </section>
-        <section class="category">
-            <h2>Postres</h2>
+            <h2 class="category__title">Postres</h2>
             <article class="category__plate">
                 <figure class="plate_cont">
                     <img src="" alt="" class="plate__img">
@@ -120,7 +120,9 @@
             </article>
         </section>
     </main>
-
+    <footer class="footer">
+        <p>asfdasd</p>
+    </footer>
     
 </body>
 </html>
