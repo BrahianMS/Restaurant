@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --color-primario: #fdf6ed;
     --color-secundario: #fa9769;
@@ -99,6 +104,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
+    width: 60%;
 }
 
 .inf__name {
@@ -122,10 +128,17 @@ body {
 .footer {
     color: white;
     background-color: var(--color-terciario);
+    height: 50px;
+    margin-bottom: 54px;
+    font-size: 20px;
 }
 
-@media (max-width: 500px){
- .category__plate:hover{
+@media (max-width: 700px){
+    .container{
+        width: 100%;
+    }
+
+    .category__plate:hover{
     flex-direction: column;
  }
     .inf__description{
@@ -135,10 +148,10 @@ body {
     display:  block ;
     font-size: 10px;
 }
-.category__plate:hover .inf__name{
+    .category__plate:hover .inf__name{
     display: none;
 }
-.category__plate:hover .inf__price{
+    .category__plate:hover .inf__price{
     display: none;
 }
 }
