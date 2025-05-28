@@ -91,8 +91,7 @@ body {
 }
 
 .plate__img {
-    width: 200px;
-    height: 230px;
+    width: 30%;
     border-radius: 5px;
 }
 
@@ -104,14 +103,19 @@ body {
 
 .inf__name {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2vw;
     color: var(--color-secundario);
     text-shadow: 1px 1px 0 var(--color-terciario);
 }
 
 .inf__price {
     font-weight:bold;
-    font-size: 20px;
+    font-size: 1.5vw;
+    color: var(--color-terciario);
+}
+.inf__description{
+    display: block;
+    font-size: 1.5vw;
     color: var(--color-terciario);
 }
 
@@ -120,6 +124,21 @@ body {
     background-color: var(--color-terciario);
 }
 
-@media screen {min-width: ;
-    
+@media (max-width: 500px){
+ .category__plate:hover{
+    flex-direction: column;
+ }
+    .inf__description{
+    display: none;
+}
+    .category__plate:hover .inf__description{
+    display:  block ;
+    font-size: 10px;
+}
+.category__plate:hover .inf__name{
+    display: none;
+}
+.category__plate:hover .inf__price{
+    display: none;
+}
 }
