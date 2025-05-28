@@ -9,12 +9,6 @@ body {
     font-family: 'Maxwell';
 }
 
-.container {
-    background-color: var(--color-primario);
-    margin: 10px;
-    border-radius: 5px;
-}
-
 .header {
     background-color: var(--color-secundario);
     font-family: var(--fuente-principal);
@@ -22,22 +16,18 @@ body {
     text-align: center;
     align-items: center;
     height: 70px;
+    width: 100%;
     color: white;
     border-radius: 5px;
 }
 
 .header__title {
-    text-shadow: 0 0 10px black;
+    text-shadow: 1px 1px 0 var(--color-terciario);
     font-size: 50px;
-}
-
-.navbar {
-    text-align: center;
 }
 
 .navbar__ul {
     list-style-type: none;
-    text-align: center;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -47,13 +37,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    border-radius: 5px;
 }
 
 .navbar__list {
     border-inline: 1px solid #bbb;
     color: white;
-    background-color: var(--color-secundario);
 }
 
 .list__link {
@@ -73,8 +62,19 @@ body {
     background-color: var(--color-terciario);
 }
 
+.container {
+    background-color: var(--color-primario);
+    margin: 10px auto;
+    border-radius: 5px;
+    width: 65%;
+}
+
 .category {
     padding: 5px 20px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .category__title {
@@ -83,7 +83,7 @@ body {
 }
 
 .category__plate {
-    border:solid 2px black;
+    border:solid 2px var(--color-terciario);
     display: flex;
     margin: 10px 0px;
     box-shadow: 10px 10px #525050;
@@ -96,7 +96,30 @@ body {
     border-radius: 5px;
 }
 
+.category__inf {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.inf__name {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--color-secundario);
+    text-shadow: 1px 1px 0 var(--color-terciario);
+}
+
+.inf__price {
+    font-weight:bold;
+    font-size: 20px;
+    color: var(--color-terciario);
+}
+
 .footer {
     color: white;
     background-color: var(--color-terciario);
+}
+
+@media screen {min-width: ;
+    
 }
