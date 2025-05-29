@@ -28,7 +28,7 @@ body {
 
 .header__title {
     text-shadow: 1px 1px 0 var(--color-terciario);
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .navbar__ul {
@@ -83,7 +83,7 @@ body {
 }
 
 .category__title {
-    font-size: 30px;
+    font-size: 40px;
     color: var(--color-terciario)
 }
 
@@ -105,18 +105,19 @@ body {
     flex-direction: column;
     margin-left: 30px;
     width: 60%;
+    justify-content: space-evenly;
 }
 
 .inf__name {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 2.5vw;
     color: var(--color-secundario);
     text-shadow: 1px 1px 0 var(--color-terciario);
 }
 
 .inf__price {
     font-weight:bold;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     color: var(--color-terciario);
 }
 .inf__description{
@@ -128,9 +129,11 @@ body {
 .footer {
     color: white;
     background-color: var(--color-terciario);
-    height: 50px;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 54px;
     font-size: 20px;
+    text-align: center;
 }
 
 @media (max-width: 700px){
@@ -140,13 +143,22 @@ body {
 
     .category__plate:hover{
     flex-direction: column;
+    align-items: center;
  }
     .inf__description{
     display: none;
 }
+
+    .inf__name{
+    font-size: 5vw;
+}
+    .inf__price{
+    font-size: 3.5vw;
+}
+
     .category__plate:hover .inf__description{
-    display:  block ;
-    font-size: 10px;
+    display:  block;
+    font-size: 2.8vw;
 }
     .category__plate:hover .inf__name{
     display: none;
