@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 2px solid var(--color-secundario);
+    border-bottom: 2px solid var(--color-secundario);
     border-radius: 5px;
 }
 
