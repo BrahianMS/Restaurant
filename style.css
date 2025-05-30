@@ -1,319 +1,192 @@
-/* ============================
-   1. ESTILOS GENERALES.
-============================= */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff;
-    color: #023047;
-    line-height: 1.6;
+}
+
+:root {
+    --color-primario: #fdf6ed;
+    --color-secundario: #fa9769;
+    --color-terciario: #525050;
+    --fuente-principal: 'Maxwell';
+}
+
+body {
+    font-family: 'Maxwell';
+}
+
+.header {
+    background-color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    font-family: 'Maxwell';
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid var(--color-secundario);
+    border-radius: 5px;
+}
+
+.header__logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.header__title {
+    text-shadow: 1px 1px 0 var(--color-terciario);
+    font-size: 60px;
+}
+
+.navbar__ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-secundario);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.navbar__list {
+    border-inline: 1px solid #bbb;
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+.list__link {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.list__link:hover:not(.list__link:active) {
+    background-color: #f5c4ae;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    overflow:hidden;
-    padding: 0.20px;
-}
-
-h1, h2, h3 {
-    color: #023047;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ============================
-   2. HEADER.
-============================= */
-header {
-    background-color: #023047;
-    color: #FFFFFF;
-    padding: 25px 0;
-    text-align: center;
-    border-bottom: #FFB703 5px solid;
-}
-
-header .logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
-    background-color: #fff;
-    border: 3px solid #FFB703;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: #FFFFFF;
-}
-
-header .subtitle {
-    font-size: 1.2rem;
-    color: #8ECAE6;
-    margin-top: 5px;
-}
-
-/* ============================
-   3. NAVEGACION.
-============================= */
-nav {
-    background: #219EBC;
-    color: #FFFFFF;
-    padding: 12px 0;
-    position: sticky;
-    z-index: 1000;
-    box-shadow: 0 2px 5px #219EBC
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 40px;
-}
-
-nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding: 10px 15px;
-    display: block;
+    background-color: var(--color-primario);
+    margin: 10px auto;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3 ease;
-}
-
-/* ============================
-   4. PSEUDO-CLASE :HOVER en enlaces de navegacion.
-============================= */
-nav ul li a:hover {
-    background-color: #FFB703;
-    color: #023047;
-}
-
-/* ============================
-   5. PSEUDO-CLASE :FOCUS en enlaces para accesibilidad.
-============================= */
-nav ul li a:focus {
-    outline: 3px solid #FFB703;
-    outline-offset: 2px;
-    background-color: #fdbb2b;
-    color: #023047;
-}
-
-nav ul li a.active {
-    background-color: #FFB703;
-    color: #023047;
-    font-weight: bold;
-}
-
-/* ============================
-   6. CONTENIDO PRINCIPAL.
-============================= */
-main {
-    padding: 25px 0;
-}
-
-#crafts-showcase {
-    padding: 25px;
-    background-color: #FFFFFF;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-#crafts-showcase h2 {
+    width: 65%;
     text-align: center;
-    color: #FB8500;
-    margin-bottom: 15px;
-    font-size: 2.2rem;
 }
 
-#crafts-showcase .section-description {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 35px;
-    color: #023047;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ============================
-   7. GRID DE ARTESANIAS CON FLEXBOX
-============================= */
-.crafts-grids {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px; 
-    justify-content: center;
-}
-
-.crafts-item {
-    background: #FFFFFF;
-    border: 1px solid #8ECAE6;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    flex-basis: calc(33.333% - 42px);
-    box-sizing: border-box;
+.category {
+    padding: 5px 20px;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: trasnform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.category__title, .container__title {
+    font-size: 40px;
+    color: var(--color-terciario)
+}
+
+.category__place {
+    text-align: left;
+    margin: 20px;
 }
 
 .category__plate {
+    border:solid 2px var(--color-terciario);
     display: flex;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.crafts-item img {
-    width: 100%;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    border: 1px solid #8ECAE6;
-    padding: 3px;
+    margin: 10px 0px;
+    box-shadow: 10px 10px #525050;
+    border-radius: 5px;
 }
 
 .plate__img {
-    width: 20%;
-    padding: 3px;
-    border: 1px solid #8ECAE6;
-    border-radius: 6px;
+    width: 25%;
+    border-radius: 5px;
 }
 
 .category__inf {
-    margin-left: 10px;
-}
-
-.inf__name {
-    font-size: italic;
-    color: #FB8500;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-.inf__description {
-    font-size: 1rem;
-    color: #023047;
-    flex-grow: 1;
-}
-
-.crafts-item h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #219EBC;
-    font-size: 1.5rem;
-}
-
-.crafts-item .artisan-name {
-    font-size: italic;
-    color: #FB8500;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.crafts-item .craft-description {
-    font-size: 0.95rem;
-    color: #023047;
-    flex-grow: 1;
-}
-
-/* ============================
-   8. PSEUDO-CLASE :HOVER 
-============================= */
-.crafts-item:hover {
-    border-color: #FFB703;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    transform: translateY(-5px);
-}
-
-/* ============================
-   9. PSEUDO-CLASE :NTH-CHILD para aternar estilos sutilmente.
-============================= */
-.crafts-item:nth-child(even) {
-    border-top: 4px solid #219EBC;
-    padding-top: calc(20px - 4px);
-}
-
-
-.crafts-item:nth-child(odd) {
-    border-top: 4px solid #FB8500;
-    padding-top: calc(20px - 4px);
-}
-
-/* ============================
-   10. FOOTER.
-============================= */
-footer {
-    background: #023047;
-    color: #8ECAE6;
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 35px;
-}
-
-footer p {
-    margin: 8px 0;
-    font-size: 0.95rem;
-}
-
-footer p a {
-    color: #FFB703;
-    text-decoration: none;
-}
-
-footer p a:hover {
-    color: #FB8500;
-    text-decoration: underline;
-}
-
-/* ============================
-   11. MOBILE.
-============================= */
-@media (max-width: 750px){
-.category__plate {
     display: flex;
-    width: 100%;
-    margin: 0 auto;
+    flex-direction: column;
+    margin-left: 30px;
+    width: 60%;
+    justify-content: space-evenly;
 }
-    
 
-.inf__description{
+.inf__name, .item__name{
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: var(--color-secundario);
+    text-shadow: 1px 1px 0 var(--color-terciario);
+}
+
+.inf__price {
+    font-weight:bold;
+    font-size: 1.7vw;
+    color: var(--color-terciario);
+}
+.inf__description, .item__description, .inf__desc{
+    display: block;
+    font-size: 1.5vw;
+    color: var(--color-terciario);
+}
+
+.container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item__name {
+    padding: 20px;
+}
+
+.item__description {
+    width: 70%;
+    position: center;
+}
+
+.footer {
+    color: white;
+    background-color: var(--color-terciario);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 54px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 750px){
+    .container{
+        width: 100%;
+}
+    .inf__description{
     display: none;
 }
 
-.inf__name{
-    font-size: 1.4rem;
+    .inf__name{
+    font-size: 5vw;
+}
+    .inf__price{
+    font-size: 3.5vw;
 }
 
-.category__plate:hover .inf__description{
+    .category__plate:hover .inf__description{
     display:  block;
     font-size: 2.8vw;
 }
-
-.category__plate:hover .inf__name{
+    .category__plate:hover .inf__name{
     display: none;
 }
-
-.item__description, .inf__desc {
-    font-size: 0.7rem;
+    .category__plate:hover .inf__price{
+    display: none;
+}
+    .item__description, .inf__desc {
+    font-size: 2.8vw;
 }
 }
