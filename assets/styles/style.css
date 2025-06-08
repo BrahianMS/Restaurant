@@ -194,7 +194,6 @@ body {
 
     .category__plate:hover .inf__description{
     display:  block;
-    font-size: 2.8vw;
 }
     .category__plate:hover .inf__name{
     display: none;
@@ -202,7 +201,13 @@ body {
     .category__plate:hover .inf__price{
     display: none;
 }
-    .item__description, .inf__desc {
+    .item__description, .inf__desc, .inf__description {
     font-size: 2.8vw;
 }
+}
+
+@media (max-width: 480px) {
+    .inf__desc, .inf__description, .item__description {
+        font-size: 4vw;
+    }
 }
