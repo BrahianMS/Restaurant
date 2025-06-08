@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Maxwell';
+    src: url(../fonts/MAXWELL-REGULAR.ttf) format(truetype);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Maxwell';
+    src: url(../fonts/MAXWELL-BOLD.ttf) format(truetype);
+    font-weight: bold;
+}
